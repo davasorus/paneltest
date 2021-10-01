@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,7 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,10 +69,65 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\childForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\childForm1.Designer.cs">
+      <DependentUpon>childForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\childForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\childForm2.Designer.cs">
+      <DependentUpon>childForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\childForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\childForm3.Designer.cs">
+      <DependentUpon>childForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\childForm4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\childForm4.Designer.cs">
+      <DependentUpon>childForm4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\childForm5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\childForm5.Designer.cs">
+      <DependentUpon>childForm5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\childForm6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\childForm6.Designer.cs">
+      <DependentUpon>childForm6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\childForm1.resx">
+      <DependentUpon>childForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\childForm2.resx">
+      <DependentUpon>childForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\childForm3.resx">
+      <DependentUpon>childForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\childForm4.resx">
+      <DependentUpon>childForm4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\childForm5.resx">
+      <DependentUpon>childForm5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\childForm6.resx">
+      <DependentUpon>childForm6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,6 +137,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +151,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G5L9qP30_400x400.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
